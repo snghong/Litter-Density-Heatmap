@@ -4,56 +4,58 @@
     <meta charset="utf-8">
     <title>AI Trash Detection Heatmap</title>
     <link rel="stylesheet" href="static/style.css">
-    <script>
-      var map, heatmap;
-      function initMap() {
-        var heatMapData = [
-          {location: new google.maps.LatLng(40.445129, -79.946422), weight: 3},
-          {location: new google.maps.LatLng(40.445124, -79.946461), weight: 3},
-          {location: new google.maps.LatLng(40.445466, -79.946484), weight: 1},
-          {location: new google.maps.LatLng(40.445129, -79.946422), weight: 3},
-          {location: new google.maps.LatLng(40.445958, -79.946882), weight: 3},
-          {location: new google.maps.LatLng(40.446022, -79.946918), weight: 6},
-          {location: new google.maps.LatLng(40.44659, -79.947112), weight: 1},
-          {location: new google.maps.LatLng(40.447025, -79.947209), weight: 3},
-          {location: new google.maps.LatLng(40.445375, -79.947552), weight: 4},
-          {location: new google.maps.LatLng(40.444983, -79.948793), weight: 1},
-          {location: new google.maps.LatLng(40.444911, -79.948771), weight: 6},
-          {location: new google.maps.LatLng(40.44445483, -79.948862), weight: 8},
-          {location: new google.maps.LatLng(40.44436, -79.948937), weight: 2},
-          {location: new google.maps.LatLng(40.4454, -79.946678), weight: 6},
-          {location: new google.maps.LatLng(40.445545, -79.946726), weight: 1},
-          {location: new google.maps.LatLng(40.445376, -79.946675), weight: 7},
-          {location: new google.maps.LatLng(40.445258, -79.94753), weight: 1}
-          
-        ];
-        
-        
-        var pittsburgh = new google.maps.LatLng(40.4454, -79.94725);
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: pittsburgh,
-          zoom: 18,
-          rad: 22,
-          mapTypeId: 'roadmap'
-        });
-        
-        var heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatMapData
-        });
-        heatmap.setMap(map);
-        }
-
-    </script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQoa_n2NLmjVJE2trXM8Ca73QI9peFyKA&libraries=visualization&callback=initMap">
-      
-    </script>
+    
   </head>
   <body>
     <!-- <div>
       <h1 id="title">Welcome to the Trash Heatmap of Pittsburgh!
       </h1>
     </div> -->
-    <div id="map"></div>
+    <div id="map">
+      <script>
+        var map, heatmap;
+        function initMap() {
+          var heatMapData = [
+            {location: new google.maps.LatLng(40.445129, -79.946422), weight: 3},
+            {location: new google.maps.LatLng(40.445124, -79.946461), weight: 3},
+            {location: new google.maps.LatLng(40.445466, -79.946484), weight: 1},
+            {location: new google.maps.LatLng(40.445129, -79.946422), weight: 3},
+            {location: new google.maps.LatLng(40.445958, -79.946882), weight: 3},
+            {location: new google.maps.LatLng(40.446022, -79.946918), weight: 6},
+            {location: new google.maps.LatLng(40.44659, -79.947112), weight: 1},
+            {location: new google.maps.LatLng(40.447025, -79.947209), weight: 3},
+            {location: new google.maps.LatLng(40.445375, -79.947552), weight: 4},
+            {location: new google.maps.LatLng(40.444983, -79.948793), weight: 1},
+            {location: new google.maps.LatLng(40.444911, -79.948771), weight: 6},
+            {location: new google.maps.LatLng(40.44445483, -79.948862), weight: 8},
+            {location: new google.maps.LatLng(40.44436, -79.948937), weight: 2},
+            {location: new google.maps.LatLng(40.4454, -79.946678), weight: 6},
+            {location: new google.maps.LatLng(40.445545, -79.946726), weight: 1},
+            {location: new google.maps.LatLng(40.445376, -79.946675), weight: 7},
+            {location: new google.maps.LatLng(40.445258, -79.94753), weight: 1}
+            
+          ];
+          
+          
+          var pittsburgh = new google.maps.LatLng(40.4454, -79.94725);
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: pittsburgh,
+            zoom: 18,
+            rad: 22,
+            mapTypeId: 'roadmap'
+          });
+          
+          var heatmap = new google.maps.visualization.HeatmapLayer({
+            data: heatMapData
+          });
+          heatmap.setMap(map);
+          }
+  
+      </script>
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQoa_n2NLmjVJE2trXM8Ca73QI9peFyKA&libraries=visualization&callback=initMap">
+        
+      </script>
+    </div>
     
    
   </body>
