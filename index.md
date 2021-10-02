@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+## Welcome to AI Trash Detection Heatmap
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AI Trash Detection Heatmap</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+  <body>
+    <div>
+      <h1 id="title">Welcome to the Trash Heatmap of Pittsburgh!
+      </h1>
+    </div>
+    <div id="map"></div>
+    
+    <script>
+      var map, heatmap;
 
-You can use the [editor on GitHub](https://github.com/snghong/heatmap/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+      function initMap() {
+        var heatMapData = [
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 0.5},
+          new google.maps.LatLng(40.445261, -80.34025),
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 2},
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 3},
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 2},
+          new google.maps.LatLng(40.445261, -80.34025),
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 0.5},
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 3},
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 2},
+          new google.maps.LatLng(40.445261, -80.34025),
+          {location: new google.maps.LatLng(40.445261, -80.34025), weight: 0.5},
+          new google.maps.LatLng(40.445261, -80.34025),
+          {location: new google.maps.LatLng(40.785, -80.440), weight: 2},
+          {location: new google.maps.LatLng(40.0, -80.435), weight: 3}
+        ];
+        
+        var pittsburgh = new google.maps.LatLng(41, -79.94025);
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pittsburgh,
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+        
+        var heatmap = new google.maps.visualization.HeatmapLayer({
+          data: heatMapData
+        });
+        heatmap.setMap(map);
+        }
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/snghong/heatmap/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQoa_n2NLmjVJE2trXM8Ca73QI9peFyKA&libraries=visualization&callback=initMap">
+    </script>
+  </body>
+</html>
