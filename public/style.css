@@ -6,13 +6,12 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#floating-panel {
-  display: flex;
-  position: absolute;
-  top: 10px;
-  left: 35%;
-  z-index: 5;
-  text-align: center;
+#title{
+  margin-left:25%;
+  width:50%;
+  text-align:center;
+  z-index:200;
+  background:none;
 }
 .group {
   border: 1px solid #999;
