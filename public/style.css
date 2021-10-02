@@ -5,6 +5,7 @@
   position: absolute !important;
   overflow:auto;
 }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -16,18 +17,4 @@ html, body {
   text-align:center;
   z-index:200;
   background:none;
-}
-.group {
-  border: 1px solid #999;
-  border-radius: 3px;
-  margin: 5px;
-  padding: 5px;
-  line-height: 25px;
-  background-color: white;
-  font-family: 'Roboto','sans-serif';
-  font-size: small;
-}
-
-#radiusNum, #intensityNum, #opacityNum {
-  font-weight: 800;
 }
