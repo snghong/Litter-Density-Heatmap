@@ -1,7 +1,7 @@
 {
-  "name": "javascript-heatmap-creator",
+  "name": "trash-heatmap",
   "version": "1.0.0",
-  "description": "An easy way to visualize your location history with Google and JavaScript",
+  "description": "An easy way to track trash density with Google Maps",
   "dependencies": {
     "express": "^4.16.2",
     "path": "^0.12.7"
@@ -9,6 +9,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Brandon Morelli",
+  "author": "Password1!",
   "license": "MIT"
 }
