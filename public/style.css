@@ -1,6 +1,8 @@
 #map {
   height: 100%;
   display:block;
+  position:absolute;
+  overflow:auto;
 }
 html, body {
   height: 100%;
